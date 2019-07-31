@@ -22,4 +22,3 @@ else:
 print(message)
 print("Script has completed")
 
-
