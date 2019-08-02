@@ -19,4 +19,7 @@ def main():
     people = helmetson['people']
     for x in people:
         print(x['name'] + ' is on the ' + x['craft'])
+    print("\n\n\n")
+    for x in people:
+        print(f"{x['name']} is on the {x['craft']}")
 main()
