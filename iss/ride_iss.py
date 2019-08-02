@@ -23,5 +23,7 @@ def main():
 
     print("\n\nPeople in space: ", helmetson['number'])
     people = helmetson['people']
-    print(people)
+    for i in people:
+        print(i['name'] + ' on the ' + i['craft'])
+    
 main()
