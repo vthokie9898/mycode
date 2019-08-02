@@ -19,16 +19,16 @@ while game_number < number_of_games:
     #statements or 10 seconds wi print statments 
     #commented out
 
-    #print("Cheater 1 rolled" + str(swapper.get_dice()))
-    #print("Cheater 2 rolled" + str(loaded_dice.get_dice()))
+    print("Cheater 1 rolled" + str(swapper.get_dice()))
+    print("Cheater 2 rolled" + str(loaded_dice.get_dice()))
     if sum(swapper.get_dice()) == sum(loaded_dice.get_dice()):
-        #print("Draw")
+        print("Draw")
         pass
     elif sum(swapper.get_dice()) > sum(loaded_dice.get_dice()):
-        #print("Dice swapper wins!")
+        print("Dice swapper wins!")
         swapper_score += 1
     else:
-        #print("Loaded Dice wins!")
+        print("Loaded Dice wins!")
         loaded_dice_score += 1
     game_number += 1
 print("Simulation complete")
