@@ -11,11 +11,11 @@ class Player:
     def get_dice(self):
         return self.dice
 
-class Cheat_Swapper(Player):
+class Cheat_Swapper(Player): # Subclass, It calls on the class Player via (Player) in this line
     def cheat(self):
-        self.dice[-1] = 6
+        self.dice[-1] = 6  # will always replace the last item in the list with 6.  -1 = last item in the list
 
-class Cheat_Loaded_Dice(Player):
+class Cheat_Loaded_Dice(Player):  # Subclass, It calls on the class Player via (Player) in this line
     def cheat(self):
         i = 0
         while i < len(self.dice):
