@@ -14,6 +14,13 @@ def main():
     parser.add_argument('-att', metavar='attribute', type=str, help="Ask for any attribute")
     args = parser.parse_args()
     force_json = requests.get(NAME).json()
-    print(f'Name - {force_json.get["name"]}\n Hair Color - {force_json.get["hair_color"]}\n Optional Attribute:{args.att} - {force_json.get(args.att)}')
+    keys = list(force_json.keys())
+
+    print(f'Name - {force_json.get("name")}\nHair Color - {force_json.get("hair_color")}\nOptional Attribute:{args.att} - {force_json.get(args.att)}')
+    print('------------------------------------------------------------------------------')
+    if args.keys:
+        print("Try running the script again.This time choose any attribute from the list and pass them as argument with -att")
+        for key in keys:
+            print(key)
 
 main()
